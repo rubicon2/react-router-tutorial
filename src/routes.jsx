@@ -4,7 +4,10 @@ import Root, {
   action as rootAction,
 } from './routes/root';
 import Index from './routes/index';
-import Contact, { loader as contactLoader } from './routes/contact';
+import Contact, {
+  loader as contactLoader,
+  action as contactAction,
+} from './routes/contact';
 import EditContact, {
   loader as editLoader,
   action as editAction,
@@ -27,6 +30,7 @@ const routes = [
         path: '/contacts/:contactId',
         element: <Contact />,
         loader: contactLoader,
+        action: contactAction,
       },
       {
         path: '/contacts/:contactId/edit',
