@@ -1,5 +1,8 @@
 import ErrorPage from './error-page';
-import Root, { loader as rootLoader } from './routes/root';
+import Root, {
+  loader as rootLoader,
+  action as rootAction,
+} from './routes/root';
 import Contact, { loader as contactLoader } from './routes/contact';
 
 const routes = [
@@ -8,6 +11,7 @@ const routes = [
     element: <Root />,
     errorElement: <ErrorPage />,
     loader: rootLoader,
+    action: rootAction,
     children: [
       {
         index: true,
